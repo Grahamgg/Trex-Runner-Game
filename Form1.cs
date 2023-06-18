@@ -1,3 +1,5 @@
+using System.Reflection.Metadata.Ecma335;
+
 namespace T_Rex_Endless_Runner_Project
 {
     public partial class Form1 : Form
@@ -11,6 +13,9 @@ namespace T_Rex_Endless_Runner_Project
         Random rand = new Random();
         int position;
         bool isGameOver = false;
+
+        List<int> obstaclePositions = new List<int>();
+        //List to store obstacle positions
 
         public Form1()
         {
@@ -38,9 +43,10 @@ namespace T_Rex_Endless_Runner_Project
                 jumpSpeed = -12;
                 force -= 1;
             }
+            //modified fall speed for floaty jumps + added a double jump
             else
             {
-                jumpSpeed = 12;
+                jumpSpeed += 1;
             }
 
             if (trex.Top > 366 && jumping == false)
@@ -58,7 +64,15 @@ namespace T_Rex_Endless_Runner_Project
 
                     if (x.Left < -100)
                     {
-                        x.Left = this.ClientSize.Width + rand.Next(200, 500) + (x.Width * 15);
+                        ///generate a new position until the obstacles don't collide
+                        do
+                        {
+                            position = this.ClientSize.Width + rand.Next(200, 500) + (x.Width * 15);
+                        }
+                        while (ObstacleCollides(position));
+
+                        //update obstacle position
+                        x.Left = position;
                         score++;
                     }
                     if (trex.Bounds.IntersectsWith(x.Bounds))
@@ -80,9 +94,9 @@ namespace T_Rex_Endless_Runner_Project
             {
                 obstacleSpeed = 20;
             }
-            if (score > 12)
+            if (score > 15)
             {
-                obstacleSpeed = 50;
+                obstacleSpeed = 25;
             }
 
         }
@@ -106,6 +120,18 @@ namespace T_Rex_Endless_Runner_Project
                 GameReset();
             }
         }
+        //created obstacle collides method
+        private bool ObstacleCollides(int position)
+        {
+            foreach (int obstaclePos in obstaclePositions)
+            {
+                if(Math.Abs(obstaclePos - position) < 100)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
         private void GameReset()
         {
@@ -119,13 +145,33 @@ namespace T_Rex_Endless_Runner_Project
             isGameOver = false;
             trex.Top = 367;
 
+            //clear obstaclePositions list to avoid crashes and set static first time spawn positions
+            obstaclePositions.Clear();
+
+            obstaclePositions.Add(500);
+
+            obstaclePositions.Add(1000);
+
+            obstaclePositions.Add(1500);
+
+            obstaclePositions.Add(2000);
+
+            //Added static first time spawn positions
+
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "obstacle")
                 {
-                    position = this.ClientSize.Width + rand.Next(500, 800) + (x.Width * 10);
+                    //Retrieve the position from the obstacle positions list
+                    position = obstaclePositions[0];
 
+                    // Remove the retireved position from the obstaclePositions list
+                    obstaclePositions.RemoveAt(0);
+
+                    //update the position of the obstacle
                     x.Left = position;
+
+                    //Added code to prevent duplicate or colliding first time spawns
                 }
             }
             gameTimer.Start();
