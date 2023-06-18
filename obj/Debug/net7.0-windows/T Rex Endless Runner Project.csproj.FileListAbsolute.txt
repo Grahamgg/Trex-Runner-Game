@@ -1,0 +1,18 @@
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\bin\Debug\net7.0-windows\T Rex Endless Runner Project.exe
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\bin\Debug\net7.0-windows\T Rex Endless Runner Project.deps.json
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\bin\Debug\net7.0-windows\T Rex Endless Runner Project.runtimeconfig.json
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\bin\Debug\net7.0-windows\T Rex Endless Runner Project.dll
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\bin\Debug\net7.0-windows\T Rex Endless Runner Project.pdb
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\T Rex Endless Runner Project.csproj.AssemblyReference.cache
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\T_Rex_Endless_Runner_Project.Form1.resources
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\T_Rex_Endless_Runner_Project.Properties.Resources.resources
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\T Rex Endless Runner Project.csproj.GenerateResource.cache
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\T Rex Endless Runner Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\T Rex Endless Runner Project.AssemblyInfoInputs.cache
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\T Rex Endless Runner Project.AssemblyInfo.cs
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\T Rex Endless Runner Project.csproj.CoreCompileInputs.cache
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\T Rex Endless Runner Project.dll
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\refint\T Rex Endless Runner Project.dll
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\T Rex Endless Runner Project.pdb
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\T Rex Endless Runner Project.genruntimeconfig.cache
+C:\Users\graha\Desktop\repos\T Rex Endless Runner Project\obj\Debug\net7.0-windows\ref\T Rex Endless Runner Project.dll
